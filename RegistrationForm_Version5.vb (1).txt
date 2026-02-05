@@ -1,0 +1,60 @@
+Public Class RegistrationForm
+    Inherits Form
+
+    Private lblTitle As New Label With {.Text = "THE NATIONAL POLYTECHNIC INSTITUTE OF PAPUA NEW GUINEA"}
+    Private lblSubtitle As New Label With {.Text = """Empowering Futures Through Technical Excellence"""}
+    Private menuStrip As New MenuStrip()
+    Private btnNewIntake As New Button With {.Text = "New Intake Registration"}
+    Private btnContinuing As New Button With {.Text = "Continuing Registration"}
+    Private pbBanner As New PictureBox()
+    Private groupImportantDates As New GroupBox With {.Text = "Important Dates"}
+    Private groupHowToApply As New GroupBox With {.Text = "How To Apply"}
+    Private groupAnnouncements As New GroupBox With {.Text = "Announcement/ News"}
+    Private lblFooter As New Label With {.Text = "National Polytechnic Institute Of PNG" & vbCrLf &
+                "P.O. BOX: 4366, LAE MP" & vbCrLf &
+                "Email: enquiries@polytec.ac.pg" & vbCrLf &
+                "Website: https://www.polytec.ac.pg"}
+    Private linkHelpSupport As New LinkLabel With {.Text = "Help and Support"}
+
+    Public Sub New()
+        Me.Text = "Registration"
+
+        menuStrip.Items.Add("Home")
+        menuStrip.Items.Add("About Us")
+        menuStrip.Items.Add("Programs")
+        menuStrip.Items.Add("Contact Us")
+
+        groupImportantDates.Controls.Add(New Label With {.Text = "Application Opens: 1st Oct - 30th Nov 2025" & vbCrLf &
+                    "Deadline: 30th Nov 2025" & vbCrLf &
+                    "Late Application: 1st - 15th Dec 2025" & vbCrLf &
+                    "Results: 1st - 20th Jan 2026"})
+        groupHowToApply.Controls.Add(New Label With {.Text = "Create Account or Log in" & vbCrLf &
+                    "Fill Application Form" & vbCrLf &
+                    "Upload Documents" & vbCrLf &
+                    "Submit and Track"})groupAnnouncements.Controls.Add(New Label With {.Text = "New Programs in 2026" & vbCrLf &
+                    "Scholarship Programs Available"})
+
+        Controls.Add(lblTitle)
+        Controls.Add(lblSubtitle)
+        Controls.Add(menuStrip)
+        Controls.Add(linkHelpSupport)
+        Controls.Add(pbBanner)
+        Controls.Add(btnNewIntake)
+        Controls.Add(btnContinuing)
+        Controls.Add(groupImportantDates)
+        Controls.Add(groupHowToApply)
+        Controls.Add(groupAnnouncements)
+        Controls.Add(lblFooter)
+
+        AddHandler btnNewIntake.Click, AddressOf OpenEnrollmentFormWithCmd
+    End Sub
+
+    Private Sub OpenEnrollmentFormWithCmd(sender As Object, e As EventArgs)
+        ' Example: passing parameters via command-line to EnrollmentForm
+        Dim enrollmentFormPath As String = "EnrollmentForm.exe"
+        Dim cmdParams As String = "/type NewIntake /user " & Environment.UserName
+        Dim psi As New ProcessStartInfo(enrollmentFormPath, cmdParams)
+        Process.Start(psi)
+    End Sub
+
+End Class
