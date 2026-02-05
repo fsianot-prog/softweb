@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>National Polytech Institute – Enrollment Form</title>
+
+<!-- Favicon -->
+  <link rel="icon" href="assets/logot.png" type="image/png">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles02.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="homepage.html">
+      <img src="assets/logot.png" class="logo-img1" alt="NPI Logo">
+    </a>
+  </div>
+
+  <ul class="nav-menu">
+    <li><a href="index.html" style="color:white;">Programs</a></li>
+    <li><a href="#about" style="color:white;">About Us</a></li>
+    <li><a href="Courses.html" style="color:white;">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <h1>Enrollment Form – Academic Year 2026</h1>
+</header>
+
+<main>
+
+<!-- ================= ENROLLMENT FORM ================= -->
+<form method="POST" action="https://NPI-Studentform.NationalPolytechInstitute.com">
+
+  <!-- ================= STUDENT INFORMATION ================= -->
+  <fieldset>
+    <legend>Student Information</legend>
+
+    <label>Surname:</label><br>
+    <input type="text" name="surname" required><br><br>
+
+    <label>Given Name:</label><br>
+    <input type="text" name="given_name" required><br><br>
+
+    <label>Gender:</label><br>
+    <select name="gender">
+      <option value="">-- Select Gender --</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select><br><br>
+
+    <label>Date of Birth:</label><br>
+    <input type="date" name="dob"><br><br>
+
+    <label>Marital Status:</label><br>
+    <select name="marital_status">
+      <option value="">-- Select Status --</option>
+      <option value="Single">Single</option>
+      <option value="Married">Married</option>
+      <option value="Divorced">Divorced</option>
+    </select><br><br>
+
+    <label>Home Province:</label><br>
+    <select name="home_province">
+      <option value="">-- Select Province --</option>
+      <option value="Central">Central</option>
+      <option value="Chimbu">Chimbu (Simbu)</option>
+      <option value="Eastern Highlands">Eastern Highlands</option>
+      <option value="East New Britain">East New Britain</option>
+      <option value="East Sepik">East Sepik</option>
+      <option value="Enga">Enga</option>
+      <option value="Gulf">Gulf</option>
+      <option value="Hela">Hela</option>
+      <option value="Jiwaka">Jiwaka</option>
+      <option value="Madang">Madang</option>
+      <option value="Manus">Manus</option>
+      <option value="Milne Bay">Milne Bay</option>
+      <option value="Morobe">Morobe</option>
+      <option value="New Ireland">New Ireland</option>
+      <option value="Oro">Oro (Northern)</option>
+      <option value="Southern Highlands">Southern Highlands</option>
+      <option value="Western Highlands">Western Highlands</option>
+      <option value="West New Britain">West New Britain</option>
+      <option value="West Sepik">West Sepik (Sandaun)</option>
+      <option value="Western">Western (Fly)</option>
+      <option value="Bougainville">Autonomous Region of Bougainville</option>
+      <option value="NCD">National Capital District</option>
+    </select><br><br>
+
+    <label>District:</label><br>
+    <input type="text" name="district"><br><br>
+
+    <label>EOY Port of Travel:</label><br>
+    <input type="text" name="eoy_port"><br><br>
+
+    <label>Mode of Travel:</label><br>
+    <select name="travel_mode">
+      <option value="">-- Select Mode --</option>
+      <option value="Air">Plane</option>
+      <option value="Sea">Ship</option>
+    </select><br><br>
+
+    <label>SLF Number:</label><br>
+    <input type="number" name="slf_number"><br><br>
+
+    <label>Boarding Status:</label><br>
+    <select name="boarding_status">
+      <option value="">-- Select Status --</option>
+      <option value="In Campus">In Campus</option>
+      <option value="Out Campus">Out Campus</option>
+    </select><br><br>
+  </fieldset>
+
+  <!-- ================= HOME CONTACT ================= -->
+  <fieldset>
+    <legend>Home Contact</legend>
+
+    <label>Postal Address:</label><br>
+    <input type="text" name="postal_address"><br><br>
+
+    <label>Mobile Phone:</label><br>
+    <input type="tel" name="mobile_phone"><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email"><br><br>
+
+    <label>Home Phone:</label><br>
+    <input type="tel" name="home_phone"><br><br>
+  </fieldset>
+
+  <!-- ================= FORM BUTTONS ================= -->
+  <div class="form-buttons">
+    <button type="reset">Exit</button>
+    <button type="button" onclick="window.location.href='homepage.html'">Back</button>
+    <button type="button" onclick="window.location.href='ContinuingSponsorship.html'">Next</button>
+  </div>
+
+</form>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+  <div class="footer-left">
+    <div class="page-name">National Polytech Institute</div>
+    <div class="po-box">P.O. Box 12345<br>Lae, Papua New Guinea</div>
+  </div>
+
+  <div class="footer-left-center">
+    <div class="email">Email: enquiries@polytech.ac.pg</div>
+    <a href="https://www.polytech.ac.pg" class="website">Website: www.polytech.ac.pg</a>
+  </div>
+
+  <div class="footer-center">
+    <a href="#"><img src="assets/twity.png" alt="Twitter"></a>
+    <a href="#"><img src="assets/insta.png" alt="Instagram"></a>
+    <a href="#"><img src="assets/fb.png" alt="Facebook"></a>
+    <a href="#"><img src="assets/linkdn.png" alt="LinkedIn"></a>
+  </div>
+
+  <div class="footer-right-center">
+    <a href="#">Privacy Policy</a>
+    <a href="#">FAQ</a>
+    <a href="#">Terms & Services</a>
+    <a href="#">Cookies Policy</a>
+  </div>
+
+  <div class="footer-right">
+    <img src="assets/image1.png" alt="NPI Logo" class="footer-logo">
+    <div class="copyright">© 2026 Finnian & Nati</div>
+  </div>
+
+</footer>
+
+</body>
+</html>
