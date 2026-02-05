@@ -1,0 +1,334 @@
+body {
+    font-family: "Times New Roman" sans-serif;
+    text-align: center;
+    padding: 50px;
+    background-color: #f0f8ff;
+}
+
+
+
+p {
+    font-family: "Times New Roman" sans-serif;
+    color: #333;
+    font-size: 40px;
+    
+}
+
+
+/* =====================
+   COLOR VARIABLES
+===================== */
+
+:root {
+  --blue-dark: #0b2c5a;
+  --blue-main: #123d7a;
+  --blue-light: #eaf2fb;
+  --blue-accent: #1e88e5;
+  --white: #ffffff;
+  --gray-light: #e0e6ed;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+.navbar {
+  background: var(--blue-dark);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* space between logo and text */
+}
+
+
+.logo h2 {
+  line-height: 1;
+}
+
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+h2 {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0;
+}
+
+.nav-menu a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.nav-menu a:hover {
+  color: var(--blue-accent);
+}
+
+
+
+
+
+
+/*********************** RESET / BASE *****************************/
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+/* HEADER */
+header {
+  background-color: #1b1f8a;
+  color: #fff;
+  padding: 20px 40px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+/* MAIN WRAPPER */
+main {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* SECTION BOXES */
+form, fieldset {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* MAIN FIELDSETS */
+fieldset {
+  margin-bottom: 30px;
+  padding: 25px;
+}
+
+/* LEGENDS */
+legend {
+  font-weight: bold;
+  padding: 0 10px;
+  font-size: 16px;
+}
+
+/* SUB FIELDSETS (checkbox groups) */
+fieldset fieldset {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+/* INPUTS */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="Letters"],
+input[type="Sad"],
+input[type="Person"],
+input[type="Model"],
+input {
+  width: 250px;
+  padding: 6px;
+  margin: 6px 0 15px 0;
+  border: 1px solid #999;
+  border-radius: 3px;
+}
+
+/* CHECKBOX ALIGNMENT */
+input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+
+/* Center checkbox rows */
+.checkbox-group {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+}
+
+/* Keep legend centered */
+.checkbox-group legend {
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+}
+
+/* Checkbox + label alignment */
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+
+/* LABELS */
+label {
+  font-size: 14px;
+}
+
+/* EMERGENCY NOTE */
+h4 {
+  margin: 5px 0 20px;
+  font-weight: normal;
+  color: #444;
+}
+
+/* BUTTONS */
+button {
+  padding: 8px 20px;
+  margin: 10px 10px 0 0;
+  border: 1px solid #999;
+  border-radius: 4px;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+/* FOOTER LOOK (OPTIONAL – matches image vibe) */
+footer {
+  background-color: #1b1f8a;
+  color: #fff;
+  padding: 20px 40px;
+  font-size: 14px;
+}
+
+
+
+
+/* =====================
+   FOOTER
+===================== */
+
+.footer {
+  background: var(--blue-dark);
+  color: var(--white);
+  padding: 45px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  font-size: 14px;
+}
+
+.footer a {
+  color: var(--blue-accent);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+.page-name {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.email {
+  margin-bottom: 8px;
+}
+
+
+/* RIGHT-CENTER LINKS */
+.footer-right-center {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+margin-left: -20px;   /* ← pulls it toward social icons */
+}
+
+.footer-right-center a {
+  color: #cfe6ff; /* light blue */
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-right-center a:hover {
+  color: #1e90ff;
+  text-decoration: underline;
+}
+
+/* SOCIAL ICON CONTAINER */
+.footer-center {
+  display: flex;                /* puts icons in a straight line */
+  gap: 15px;                    /* space between icons */
+  align-items: center;
+  justify-content: center;
+}
+
+/* SOCIAL ICON IMAGES */
+.footer-center img {
+  width: 34px;                  /* ↓ decrease size here */
+  height: 34px;
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+}
+
+/* HOVER EFFECT */
+.footer-center img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* RIGHT FOOTER COLUMN */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;     /* pushes content to the right */
+  justify-content: center;
+  text-align: right;
+}
+
+/* FOOTER LOGO */
+.footer-logo {
+  width: 60px;              /* adjust size here */
+  height: auto;
+  margin-bottom: 6px;
+}
+
+/* COPYRIGHT TEXT */
+.footer-right .copyright {
+  font-size: 13px;
+  color: #ccc;
+}
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: column;
+  }
+
+  .image-section img {
+    height: 300px;
+  }
+}
+

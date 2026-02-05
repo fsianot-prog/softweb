@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>National Polytech Institute</title>
+
+<!-- Favicon -->
+  <link rel="icon" href="assets/logot.png" type="image/png">
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="styles02.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="homepage.html">
+      <img src="assets/logot.png" class="logo-img1" alt="NPI Logo">
+	<h2>National Polytech Institute</h2>
+    </a>
+  </div>
+
+  <ul class="nav-menu">
+    <li><a href="index.html" style="color:white;">Programs</a></li>
+    <li><a href="#about" style="color:white;">About Us</a></li>
+    <li><a href="Courses.html" style="color:white;">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <h1>Enrollment Form For Academic Year 2026</h1>
+</header>
+
+<main>
+
+<!-- ================= DOCUMENT UPLOAD FORM ================= -->
+<form method="POST"
+      action="https://NPI-Studentform.NationalPolytechInstitute.com"
+      enctype="multipart/form-data">
+
+  <fieldset>
+    <legend>Required Documents (PDF Only)</legend>
+
+    <label>Payment Receipts (PDF):</label><br>
+    <input type="file" name="payment_receipt" accept=".pdf"><br><br>
+
+    <label>Acceptance Letter (PDF):</label><br>
+    <input type="file" name="acceptance_letter" accept=".pdf"><br><br>
+
+    <label>Grade 12 Certificate (PDF):</label><br>
+    <input type="file" name="grade12_certificate" accept=".pdf"><br><br>
+
+    <label>NID / Birth Certificate (PDF):</label><br>
+    <input type="file" name="nid_birth_certificate" accept=".pdf"><br><br>
+  </fieldset>
+
+  <!-- ================= FORM BUTTONS ================= -->
+  <div class="form-buttons">
+    <button type="reset">Exit</button>
+
+    <button type="button"
+            onclick="window.location.href='homepage.html'">
+      Back
+    </button>
+
+    <button type="button"
+            onclick="window.location.href='StudentInformation.html'">
+      Next
+    </button>
+  </div>
+
+</form>
+
+</main>
+
+<footer class="footer">
+
+    <div class="footer-left">
+        <div class="page-name">National Polytech Institute</div>
+        <div class="po-box">
+            P.O. Box 12345<br>
+            Lae, Papua New Guinea
+        </div>
+    </div>
+
+    <div class="footer-left-center">
+        <div class="email">Email: enquiries@polytech.ac.pg</div>
+        <a href="https://www.polytech.ac.pg" class="website">
+            https://www.polytech.ac.pg
+        </a>
+    </div>
+
+    <div class="footer-center">
+        <a href="#"><img src="assets/twity.png" alt="Twitter"></a>
+        <a href="#"><img src="assets/insta.png" alt="Instagram"></a>
+        <a href="#"><img src="assets/fb.png" alt="Facebook"></a>
+        <a href="#"><img src="assets/linkdn.png" alt="LinkedIn"></a>
+    </div>
+
+    <div class="footer-right-center">
+        <a href="#">Privacy Policy</a>
+        <a href="#">FAQ</a>
+        <a href="#">Terms & Services</a>
+        <a href="#">Cookies Policy</a>
+    </div>
+
+    <div class="footer-right">
+        <img src="assets/logot.png" alt="Institute Logo" class="footer-logo">
+        <div class="copyright">
+            © 2026 Finnian & Nati
+        </div>
+    </div>
+
+</footer>
+
+</body>
+</html>

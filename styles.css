@@ -1,0 +1,318 @@
+/* =====================
+   GLOBAL STYLES
+===================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f4f8fc;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* =====================
+   COLOR VARIABLES
+===================== */
+
+:root {
+  --blue-dark: #0b2c5a;
+  --blue-main: #123d7a;
+  --blue-light: #eaf2fb;
+  --blue-accent: #1e88e5;
+  --white: #ffffff;
+  --gray-light: #e0e6ed;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+
+.navbar {
+  background: var(--blue-dark);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* space between logo and text */
+}
+
+
+.logo h2 {
+  line-height: 1;
+}
+
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+h2 {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0;
+}
+
+.nav-menu a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.nav-menu a:hover {
+  color: var(--blue-accent);
+}
+
+/* =====================
+   HERO / IMAGE SECTION
+===================== */
+
+.image-section {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(
+    rgba(11, 44, 90, 0.75),
+    rgba(11, 44, 90, 0.5)
+  );
+}
+
+.image-section img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  opacity: 0.35;
+}
+
+.button-container {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 25px;
+}
+
+.btn {
+  background: var(--blue-accent);
+  color: var(--white);
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--white);
+  color: var(--blue-dark);
+}
+
+/* =====================
+   DIALOG SECTION
+===================== */
+
+.dialog-section {
+  background: linear-gradient(
+  to bottom,
+  #cfe9ff 0%,     /* light blue (top) */
+  #f5f7fa 50%,    /* smoky white (center) */
+  #cfe9ff 100%    /* light blue (bottom) */
+);
+  padding: 60px 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Dialog Box */
+.dialog-box {
+background: var(--blue-main);
+
+
+  width: 280px;
+  min-height: 300px;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Headings */
+.dialog-box h3 {
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 18px;
+}
+
+/* Text rows */
+.dialog-box p,
+.dialog-box a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  font-size: 15px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* Icons */
+.dialog-box img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Hover effect */
+.dialog-box a:hover {
+  text-decoration: underline;
+}
+
+
+
+/************************ABOUT US SECTION *******************************************/
+.about-section {
+  background-image: url("assets/background.jpg"); /* change image if needed */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Dark overlay for readability */
+.about-overlay {
+  background: rgba(0, 0, 60, 0.65); /* dark blue overlay */
+  width: 100%;
+  height: 100%;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content {
+  max-width: 800px;
+  text-align: center;
+  color: white;
+}
+
+/* Thin main title */
+.about-content h1 {
+  font-size: 42px;
+  font-weight: 300;   /* thin */
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+/* Secondary heading */
+.about-content h2 {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 25px;
+  color: #cfe6ff; /* light blue */
+}
+
+/* Paragraph */
+.about-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 35px;
+  color: #f0f6ff;
+}
+
+/* Button */
+.about-btn {
+  display: inline-block;
+  padding: 12px 35px;
+  background: #1e90ff;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.about-btn:hover {
+  background: #0b5ed7;
+  transform: translateY(-2px);
+}
+
+
+/* =====================
+   FOOTER
+===================== */
+
+.footer {
+background: var(--blue-dark);
+
+
+  color: var(--white);
+  padding: 45px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  font-size: 14px;
+}
+
+.footer a {
+  color: var(--blue-accent);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.page-name {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.email {
+  margin-bottom: 8px;
+}
+
+.footer-center img {
+  width: 24px;
+  margin-right: 10px;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: column;
+  }
+
+  .image-section img {
+    height: 300px;
+  }
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ <!-- Favicon -->
+  <link rel="icon" href="assets/logot.png" type="image/png">
+
+  <title>Application Review</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 30px;
+    }
+
+    .review-wrapper {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .student-type {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 25px;
+      color: #191970;
+    }
+
+    .section {
+      margin-bottom: 25px;
+    }
+
+    .section h3 {
+      background: #191970;
+      color: white;
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .row {
+      display: flex;
+      padding: 8px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .label {
+      width: 40%;
+      font-weight: bold;
+    }
+
+    .value {
+      width: 60%;
+    }
+
+    .confirm-box {
+      margin-top: 25px;
+      padding: 15px;
+      background: #f0f0f0;
+      border-radius: 6px;
+    }
+
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="review-wrapper">
+
+  <h2>Application Review Summary</h2>
+  <div class="student-type" id="studentType"></div>
+
+  <div id="reviewContent"></div>
+
+  <div class="confirm-box">
+    <label>
+      <input type="checkbox" id="confirmCheck">
+      I confirm that all information provided is true and correct.
+    </label>
+  </div>
+
+  <div class="buttons">
+    <button onclick="goBack()">Back to Edit</button>
+
+    <form action="https://NPI-final-submit.NationalPolytechInstitute.com" method="POST">
+      <input type="hidden" name="finalApplication" id="finalApplication">
+      <button type="submit" id="submitBtn" disabled>Confirm & Submit</button>
+    </form>
+  </div>
+
+</div>
+
+<script>
+  const data = JSON.parse(localStorage.getItem("applicationData"));
+  const review = document.getElementById("reviewContent");
+  const studentType = document.getElementById("studentType");
+
+  if (!data) {
+    review.innerHTML = "<p>No application data found.</p>";
+  } else {
+
+    // Detect student type
+    studentType.textContent = data.student_type || "Applicant";
+
+    // Grouping logic
+    const groups = {
+      "Student Information": [],
+      "Sponsorship Information": [],
+      "Other Details": []
+    };
+
+    for (const key in data) {
+      if (key.includes("sponsor") || key.includes("phone") || key.includes("email")) {
+        groups["Sponsorship Information"].push([key, data[key]]);
+      } else if (key.includes("student") || key.includes("name") || key.includes("gender")) {
+        groups["Student Information"].push([key, data[key]]);
+      } else {
+        groups["Other Details"].push([key, data[key]]);
+      }
+    }
+
+    // Render sections
+    for (const section in groups) {
+      if (groups[section].length === 0) continue;
+
+      const div = document.createElement("div");
+      div.className = "section";
+      div.innerHTML = `<h3>${section}</h3>`;
+
+      groups[section].forEach(item => {
+        div.innerHTML += `
+          <div class="row">
+            <div class="label">${item[0].replace(/_/g, " ")}</div>
+            <div class="value">${item[1]}</div>
+          </div>
+        `;
+      });
+
+      review.appendChild(div);
+    }
+
+    document.getElementById("finalApplication").value = JSON.stringify(data);
+  }
+
+  // Confirmation logic
+  document.getElementById("confirmCheck").addEventListener("change", function () {
+    document.getElementById("submitBtn").disabled = !this.checked;
+  });
+
+  function goBack() {
+    history.back();
+  }
+</script>
+
+</body>
+</html>

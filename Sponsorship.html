@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>National Polytech Institute</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/logot.png" type="image/png">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles02.css">
+</head>
+
+<input type="hidden" name="student_type" value="New Intake">
+
+
+<script>
+function goToReview() {
+  const formData = {};
+
+  document.querySelectorAll("input, select, textarea").forEach(field => {
+    if (field.type === "checkbox") {
+      formData[field.name] = field.checked;
+    } else {
+      formData[field.name] = field.value;
+    }
+  });
+
+  localStorage.setItem("applicationData", JSON.stringify(formData));
+  window.location.href = "Review.html";
+}
+</script>
+
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="homepage.html">
+      <img src="assets/logot.png" class="logo-img1" alt="NPI Logo">
+	<h2>National Polytech Institute</h2>
+    </a>
+  </div>
+
+  <ul class="nav-menu">
+    <li><a href="index.html" style="color:white;">Programs</a></li>
+    <li><a href="#about" style="color:white;">About Us</a></li>
+    <li><a href="Courses.html" style="color:white;">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <h1>Enrollment Form For Academic Year 2026</h1>
+</header>
+
+<main>
+
+<!-- ================= SPONSORSHIP + EMERGENCY FORM ================= -->
+<form method="POST" action="https://NPI-feedback.NationalPolytechInstitute.com">
+
+  <!-- ================= SPONSORSHIP INFORMATION ================= -->
+  <fieldset>
+    <legend>Sponsorship Information</legend>
+
+    <fieldset class="checkbox-group">
+      <legend>Sponsor</legend>
+      <label><input type="checkbox" name="sponsor[]" value="Self"> Self</label>
+      <label><input type="checkbox" name="sponsor[]" value="Corporate"> Corporate</label>
+      <label><input type="checkbox" name="sponsor[]" value="HECAS"> HECAS</label>
+    </fieldset>
+
+    <fieldset class="checkbox-group">
+      <legend>Other Sponsor Type</legend>
+      <label><input type="checkbox" name="sponsor[]" value="Provincial"> Provincial</label>
+      <label><input type="checkbox" name="sponsor[]" value="District"> District</label>
+      <label><input type="checkbox" name="sponsor[]" value="Other"> Other</label>
+    </fieldset>
+
+    <label>Other (Please Specify):</label><br>
+    <input type="text" name="other_specify" placeholder="Please specify"><br><br>
+
+    <label>Sponsor Name:</label><br>
+    <input type="text" name="sponsor_name" required><br><br>
+
+    <label>Sponsor Address:</label><br>
+    <input type="text" name="sponsor_address" required><br><br>
+
+    <label>Contact Person:</label><br>
+    <input type="text" name="contact_person" required><br><br>
+
+    <label>Phone:</label><br>
+    <input type="tel" name="phone" placeholder="675XXXXXXXX" required><br><br>
+
+    <label>Mobile:</label><br>
+    <input type="tel" name="mobile"><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required>
+  </fieldset>
+
+  <!-- ================= EMERGENCY CONTACT ================= -->
+  <fieldset>
+    <legend>Emergency Contact</legend>
+
+    <h4><strong>Note:</strong> These contacts must be different from the Sponsorship Information section.</h4>
+
+    <fieldset>
+      <legend>1. Person to Contact</legend>
+
+      <label>Name:</label><br>
+      <input type="text" name="ec1_name" required><br><br>
+
+      <label>Relationship:</label><br>
+      <input type="text" name="ec1_relationship"><br><br>
+
+      <label>Postal Address:</label><br>
+      <input type="text" name="ec1_address"><br><br>
+
+      <label>Phone:</label><br>
+      <input type="tel" name="ec1_phone"><br><br>
+
+      <label>Mobile:</label><br>
+      <input type="tel" name="ec1_mobile"><br><br>
+
+      <label>Email:</label><br>
+      <input type="email" name="ec1_email">
+    </fieldset>
+
+    <fieldset>
+      <legend>2. Person to Contact</legend>
+
+      <label>Name:</label><br>
+      <input type="text" name="ec2_name" required><br><br>
+
+      <label>Relationship:</label><br>
+      <input type="text" name="ec2_relationship"><br><br>
+
+      <label>Postal Address:</label><br>
+      <input type="text" name="ec2_address"><br><br>
+
+      <label>Phone:</label><br>
+      <input type="tel" name="ec2_phone"><br><br>
+
+      <label>Mobile:</label><br>
+      <input type="tel" name="ec2_mobile"><br><br>
+
+      <label>Email:</label><br>
+      <input type="email" name="ec2_email">
+    </fieldset>
+  </fieldset>
+
+  <!-- ================= FORM BUTTONS ================= -->
+  <div class="form-buttons">
+    <button type="reset">Exit</button>
+
+    <button type="button"
+            onclick="window.location.href='StudentInformation.html'">
+      Back
+    </button>
+
+<button type="button" onclick="goToReview()">Review Application</button>
+
+
+</form>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="footer-left">
+    <div class="page-name">National Polytech Institute</div>
+    <div class="po-box">P.O. Box 12345<br>Lae, Papua New Guinea</div>
+  </div>
+
+  <div class="footer-left-center">
+    <div class="email">Email: enquiries@polytech.ac.pg</div>
+    <a href="https://www.polytech.ac.pg" class="website">Website: www.polytech.ac.pg</a>
+  </div>
+
+  <div class="footer-center">
+    <a href="#"><img src="assets/twity.png" alt="Twitter"></a>
+    <a href="#"><img src="assets/insta.png" alt="Instagram"></a>
+    <a href="#"><img src="assets/fb.png" alt="Facebook"></a>
+    <a href="#"><img src="assets/linkdn.png" alt="LinkedIn"></a>
+  </div>
+
+  <div class="footer-right-center">
+    <a href="#">Privacy Policy</a>
+    <a href="#">FAQ</a>
+    <a href="#">Terms & Services</a>
+    <a href="#">Cookies Policy</a>
+  </div>
+
+  <div class="footer-right">
+    <img src="assets/logot.png" alt="NPI Logo" class="footer-logo">
+    <div class="copyright">© 2026 Finnian & Nati</div>
+  </div>
+</footer>
+
+</body>
+</html>
